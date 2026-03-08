@@ -1,0 +1,17 @@
+<p class="lead">{{ site.category_descriptions[include.category_name] }}</p>
+
+{% if include.posts and include.posts.size > 0 %}
+  <div class="post-list">
+    {% for post in include.posts %}
+      <article class="post-card">
+        <p class="small-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        {% if post.excerpt %}<p>{{ post.excerpt }}</p>{% endif %}
+      </article>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="card">
+    <p>No posts in this category yet.</p>
+  </div>
+{% endif %}

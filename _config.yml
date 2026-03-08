@@ -1,0 +1,37 @@
+title: "Economic Security Notes"
+description: "Research-based writing on trade dependencies, reverse dependencies, energy security, and economic security."
+url: ""
+baseurl: ""
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title/
+collections_dir: .
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: "Your Name"
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+navigation:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Categories
+    url: /categories/
+
+category_descriptions:
+  trade-dependencies: "Import concentration, supplier risk, and strategic goods exposure."
+  reverse-dependencies: "Cases where other countries depend on Norwegian goods, inputs, or services."
+  energy-security: "Electricity, gas, oil, grids, resilience, and transition vulnerabilities."
+  economic-security: "Statecraft, resilience, industrial policy, sanctions, and systemic risk."
+  methods-data: "Methodology notes, data source guides, replication, and measurement choices."
